@@ -70,7 +70,13 @@ app.use(helmet({
 }));
 
 app.use(express.json({ limit: '64kb' }));
-app.use(express.static(path.join(__dirname), {
+
+// Serve static files from the directory server.js lives in
+const ROOT = path.resolve(__dirname);
+console.log('Static root:', ROOT);
+console.log('index.html exists:', require('fs').existsSync(path.join(ROOT, 'index.html')));
+
+app.use(express.static(ROOT, {
   index: 'index.html',
   extensions: ['html'],
 }));
@@ -267,7 +273,7 @@ app.post('/api/inquiry', formLimiter, async (req, res) => {
 
 // ── Catch-all → index.html (SPA fallback) ────────────────────────────────────
 app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, 'index.html'));
+  res.sendFile(path.join(ROOT, 'index.html'));
 });
 
 // ── Start ─────────────────────────────────────────────────────────────────────
