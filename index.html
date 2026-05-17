@@ -1,0 +1,675 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>MOD MACHINE· Handheld Modding Services</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Barlow+Condensed:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- ===== MASTHEAD ===== -->
+<header class="masthead">
+  <div class="masthead-inner">
+    <div class="mast-row-1">
+      <span>UNIT 04 · BATCH 2026</span>
+      <div class="center">
+        <span>Built to Order Nintendo Handhelds</span>
+        <span>Est. 2026</span>
+      </div>
+      <span>SECTOR A · <span style="color: var(--orange)">★ open for commissions</span></span>
+    </div>
+    <div class="mast-row-2">
+      <div class="wordmark" onclick="setView('home')">MOD<span class="small">⚙</span>MACHINE</div>
+      <div class="mast-right">
+        <nav class="mast-nav">
+          <button data-view="home" class="active" onclick="setView('home')"><span class="num">01</span>Operations</button>
+          <button data-view="build" onclick="setView('build')"><span class="num">02</span>configurator</button>
+          <button data-view="inquire" onclick="setView('inquire')"><span class="num">03</span>Field Report</button>
+          <button data-view="social" onclick="setView('social')"><span class="num">04</span>Live Feed</button>
+        </nav>
+        <button class="theme-toggle" onclick="toggleTheme()" id="themeToggleBtn" title="Toggle light/dark mode">
+          <span class="t-icon" id="themeIcon">☾</span>
+          <span id="themeLabel">Dark</span>
+        </button>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="frame">
+
+<!-- ===== HOME ===== -->
+<section class="view active" id="view-home">
+
+  <!-- COVER -->
+  <div class="cover">
+    <div class="cover-eyebrow">
+      <span><span class="red">★</span> MAN MADE · NEVER ARTIFICIAL</span>
+      <div class="right">
+        <span>Handhelds 1989—2005</span>
+        <span>Made by hand</span>
+      </div>
+    </div>
+
+    <h1 class="cover-headline">
+      We mod<br/>
+      the <em>brick</em><br/>
+      <span class="underline">so you don't</span><br/>
+      have&nbsp;to.
+    </h1>
+
+    <aside class="cover-aside">
+      <div class="label">⚙ THE BRIEF</div>
+      <p class="lede">Specialist restoration, repair, and modification for the entire Game Boy line. Component-level work, no glue, original screws. Mail it in or commission a build from the chassis up — every unit returns documented, cleaned, and calibrated.</p>
+      <div class="cover-cta">
+        <button class="btn primary" onclick="setView('build')">Configure a build <span class="arrow">→</span></button>
+        <button class="btn" onclick="setView('inquire')">Send something weird <span class="arrow">→</span></button>
+      </div>
+      <div class="price-from">
+        <div class="pf-item">
+          <span class="pf-label">Send-in service from</span>
+          <span class="pf-val"><span class="d">$</span>55</span>
+        </div>
+        <div class="pf-item">
+          <span class="pf-label">Full builds from</span>
+          <span class="pf-val"><span class="d">$</span>85</span>
+        </div>
+        <div class="pf-item">
+          <span class="pf-label">IPS screens from</span>
+          <span class="pf-val"><span class="d">$</span>50</span>
+        </div>
+      </div>
+    </aside>
+
+    <div class="stats">
+      <div class="stat">
+        <div class="stat-num">4</div>
+        <div class="stat-label">Units restored</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">3<span style="font-size: 0.5em">d</span></div>
+        <div class="stat-label">Avg. turnaround</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">6</div>
+        <div class="stat-label">Models supported</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">60<span style="font-size: 0.5em">d</span></div>
+        <div class="stat-label">Workmanship warranty</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- STUDIO / ABOUT -->
+  <section class="sect-head">
+    <h2><span class="num">01</span>The <em>studio</em></h2>
+    <div class="meta"><span class="pg">p. 04</span>About · Process · People</div>
+  </section>
+
+  <div class="studio">
+    <h3>One workbench. <em>Six</em> consoles.<br/>No&nbsp;shortcuts.</h3>
+    <div class="studio-col">
+      <p>Mod Machine is a one-person workshop dedicated to keeping Nintendo's portable line alive. The catalog covers every handheld from the 1989 DMG-01 through the 2005 Game Boy Micro — and only those. Doing one thing well, slowly.</p>
+      <p>Every device that comes through the shop is opened, photographed, cleaned, tested, and documented. If the original screws stripped before they got here, you'll get a note in the return packet.</p>
+    </div>
+    <div class="studio-col">
+      <p>Mods are layered, not stacked. An IPS retrofit gets paired with a properly-rated regulator and a clean ground. A USB-C port is fused before it leaves. A bivert chip is socketed so the next owner can pull it without a heat gun. Decisions are made with the next ten years in mind, not the next ten minutes.</p>
+      <p>Commissions take 7 to 18 days depending on parts. Repairs are quoted before any work begins.</p>
+    </div>
+  </div>
+
+  <!-- GALLERY -->
+  <section class="sect-head">
+    <h2><span class="num">02</span>Build <em>log</em></h2>
+    <div class="meta"><span class="pg">UNIT 001</span>First documented build · more to follow</div>
+  </section>
+
+  <div class="gallery">
+    <div class="gal-grid" id="galleryGrid"></div>
+  </div>
+
+  <!-- CATALOG -->
+  <section class="sect-head">
+    <h2><span class="num">03</span>The <em>catalog</em></h2>
+    <div class="meta"><span class="pg">p. 18</span>Six standard procedures</div>
+  </section>
+
+  <div class="catalog">
+    <div class="svc">
+      <div class="svc-num">01</div>
+      <div class="svc-main">
+        <h3>Shell &amp; buttons</h3>
+        <p>Full eXtremeRate IPS-ready housing with matching buttons included. Alternate button color available for +$10 to cover sourcing a separate set.</p>
+        <div class="spec">eXtremeRate ABS · IPS-ready mold · buttons incl.</div>
+      </div>
+      <div class="svc-price">
+        <div class="small">from</div>
+        <div class="amt">$45</div>
+      </div>
+    </div>
+    <div class="svc">
+      <div class="svc-num">02</div>
+      <div class="svc-main">
+        <h3>IPS retrofit</h3>
+        <p>Modern laminated panels with full brightness control, optional pixel grid overlays, and custom boot logos. Q5 and FunnyPlaying options stocked.</p>
+        <div class="spec">Q5 / FunnyPlaying · 30 &amp; 60 Hz modes</div>
+      </div>
+      <div class="svc-price">
+        <div class="small">from</div>
+        <div class="amt">$120</div>
+      </div>
+    </div>
+    <div class="svc">
+      <div class="svc-num">03</div>
+      <div class="svc-main">
+        <h3>Audio circuit</h3>
+        <p>Prosound line-out, bivert chip installation, op-amp upgrades, and concealed mute switches. Done with shielded cable runs and isolated grounds.</p>
+        <div class="spec">Shielded runs · Hidden mute switch</div>
+      </div>
+      <div class="svc-price">
+        <div class="small">from</div>
+        <div class="amt">$35</div>
+      </div>
+    </div>
+    <div class="svc">
+      <div class="svc-num">04</div>
+      <div class="svc-main">
+        <h3>Battery upgrade</h3>
+        <p>Internal lithium-ion conversion with fuel gauge, overdischarge protection, and original housing fitment. No external bulges or hacks.</p>
+        <div class="spec">2000–3500 mAh · Reversible</div>
+      </div>
+      <div class="svc-price">
+        <div class="small">from</div>
+        <div class="amt">$55</div>
+      </div>
+    </div>
+    <div class="svc">
+      <div class="svc-num">05</div>
+      <div class="svc-main">
+        <h3>USB-C retrofit</h3>
+        <p>Replaces the stock charge port with a USB-C PD jack in the original footprint. Fused, polarity-protected, reversible.</p>
+        <div class="spec">5V PD · Drop-in fitment</div>
+      </div>
+      <div class="svc-price">
+        <div class="small">from</div>
+        <div class="amt">$25</div>
+      </div>
+    </div>
+    <div class="svc">
+      <div class="svc-num">06</div>
+      <div class="svc-main">
+        <h3>Bluetooth audio</h3>
+        <p>Low-latency wireless headphone output via BlueRetro modules with concealed pairing button. AptX-LL compatible.</p>
+        <div class="spec">BT 5.0 · aptX-LL · Hidden pairing</div>
+      </div>
+      <div class="svc-price">
+        <div class="small">from</div>
+        <div class="amt">$65</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- PROCESS -->
+  <section class="sect-head">
+    <h2><span class="num">04</span>How it <em>works</em></h2>
+    <div class="meta"><span class="pg">p. 22</span>From inquiry to return</div>
+  </section>
+
+  <div class="process">
+    <div class="proc-grid">
+      <div class="step">
+        <div class="step-num">01</div>
+        <h4>Configure or inquire</h4>
+        <p>Use the spec sheet on page 02, or send a brief via the inquiry form. We reply within 48 hours with availability and an estimate.</p>
+        <div class="duration"><b>≤ 48 hrs</b> reply time</div>
+      </div>
+      <div class="step">
+        <div class="step-num">02</div>
+        <h4>Send in — or we source</h4>
+        <p>Mail your handheld in (we send packing notes and a pre-paid label), or choose "source a unit" and we'll locate a working chassis for you. Drop-off by appointment also available.</p>
+        <div class="duration"><b>2–4 days</b> transit · or <b>+$30</b> to source</div>
+      </div>
+      <div class="step">
+        <div class="step-num">03</div>
+        <h4>Work &amp; documentation</h4>
+        <p>The unit is photographed in, opened, diagnosed, and worked on. You receive a progress note when work begins and another when it ends.</p>
+        <div class="duration"><b>7–18 days</b> on bench</div>
+      </div>
+      <div class="step">
+        <div class="step-num">04</div>
+        <h4>Return &amp; warranty</h4>
+        <p>Packed double-boxed with the original screws, a service record, and a 60-day workmanship warranty. Photos included.</p>
+        <div class="duration"><b>60 days</b> warranty</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- TESTIMONIAL -->
+  <div class="quote">
+    <div class="who">
+      ★★★★★<br/>
+      <span class="name">— Jon Schmeling</span><br/>
+      Builder and Founder
+    </div>
+    <blockquote>
+      Nothing beats playing those games you grew up with on the original hardware. Making them look better, it's just a bonus.
+    </blockquote>
+  </div>
+
+  <!-- FAQ -->
+  <section class="sect-head">
+    <h2><span class="num">05</span>Common <em>questions</em></h2>
+    <div class="meta"><span class="pg">p. 28</span>Six things people ask</div>
+  </section>
+
+  <div class="faq">
+    <div class="faq-list" id="faqList"></div>
+  </div>
+
+</section>
+
+<!-- ===== BUILD ===== -->
+<section class="view" id="view-build">
+
+  <div class="build-cover">
+    <h1>The <em>spec</em><br/>sheet.</h1>
+    <aside class="aside">
+      <div class="label">⚙ WORK ORDER — NON-BINDING</div>
+      <p>Pick a chassis, then layer in modifications. This is an estimate — we confirm parts availability and turnaround before any work begins or any payment is taken.</p>
+      <div class="pgmeta">Document B-04 · Revision: live</div>
+    </aside>
+  </div>
+
+  <div class="build-grid">
+
+    <div class="build-config">
+
+      <div class="opt">
+        <div class="opt-head">
+          <div class="stepn">01</div>
+          <h4>Unit <em>· source</em></h4>
+          <div class="tag">Required</div>
+        </div>
+        <div class="chips" id="sourceChoices"></div>
+      </div>
+
+      <div class="opt">
+        <div class="opt-head">
+          <div class="stepn">02</div>
+          <h4>Chassis <em>· required</em></h4>
+          <div class="tag">Pick one</div>
+        </div>
+        <div class="ch-grid" id="chassisGrid"></div>
+      </div>
+
+      <div class="opt">
+        <div class="opt-head">
+          <div class="stepn">03</div>
+          <h4>Shell <em>· color</em></h4>
+          <div class="tag">Optional</div>
+        </div>
+        <div class="chips" id="shellChoices"></div>
+      </div>
+
+      <div class="opt">
+        <div class="opt-head">
+          <div class="stepn">04</div>
+          <h4>Buttons <em>· color</em></h4>
+          <div class="tag">eXtremeRate ABS</div>
+        </div>
+        <p style="font-family:'Space Mono',monospace;font-size:10px;letter-spacing:1.5px;color:var(--ink-3);text-transform:uppercase;margin-bottom:14px;">Shell includes matching buttons. Alternate color requires a separate set (+$10).</p>
+        <div class="chips" id="buttonChoices"></div>
+      </div>
+
+      <div class="opt">
+        <div class="opt-head">
+          <div class="stepn">05</div>
+          <h4>Display</h4>
+          <div class="tag">Recommended</div>
+        </div>
+        <div class="chips" id="screenChoices"></div>
+      </div>
+
+      <div class="opt">
+        <div class="opt-head">
+          <div class="stepn">06</div>
+          <h4>Audio <em>· circuit</em></h4>
+          <div class="tag">Optional</div>
+        </div>
+        <div class="chips" id="audioChoices"></div>
+      </div>
+
+      <div class="opt">
+        <div class="opt-head">
+          <div class="stepn">07</div>
+          <h4>Power</h4>
+          <div class="tag">Recommended</div>
+        </div>
+        <div class="chips" id="powerChoices"></div>
+      </div>
+
+      <div class="opt">
+        <div class="opt-head">
+          <div class="stepn">08</div>
+          <h4>Wireless</h4>
+          <div class="tag">Optional</div>
+        </div>
+        <div class="chips" id="wirelessChoices"></div>
+      </div>
+
+    </div>
+
+    <aside class="bom">
+      <div class="bom-top">
+        <h3>Bill of materials</h3>
+        <span class="live">● LIVE</span>
+      </div>
+      <div class="bom-preview">
+        <div id="previewSlot"></div>
+        <div class="pcap"><em>fig.</em> ii · live preview</div>
+      </div>
+      <ul class="bom-list" id="bomList"></ul>
+      <div class="bom-total">
+        <span class="lbl">Subtotal</span>
+        <span class="amt"><span class="d">$</span><span id="totalNum">0</span></span>
+      </div>
+      <div class="bom-eta">Est. turnaround <strong id="etaText">7 days</strong></div>
+      <button onclick="submitBuild()">Request build <span class="arr">→</span></button>
+    </aside>
+
+  </div>
+
+</section>
+
+<!-- ===== INQUIRE ===== -->
+<section class="view" id="view-inquire">
+  <div class="inquire">
+
+    <div class="inq-cover">
+      <h1>Got something<br/><em>weirder?</em></h1>
+      <aside class="aside">
+        <p>If your situation isn't on the catalog — region modding, dead boards, screen burn, mystery corrosion, bootleg cartridge authentication, bulk wholesale — write a brief. Every inquiry receives a reply within 48 hours.</p>
+      </aside>
+    </div>
+
+    <div class="inq-body">
+
+      <div class="accept">
+        <div class="head">
+          What we accept
+          <span class="pin">FORM 21-B</span>
+        </div>
+        <ul>
+          <li class="y"><span class="ic">✓</span><span>Component-level repairs &amp; revivals</span><span class="st">always</span></li>
+          <li class="y"><span class="ic">✓</span><span>Region &amp; bootleg modifications</span><span class="st">always</span></li>
+          <li class="y"><span class="ic">✓</span><span>Custom shells &amp; one-off mods</span><span class="st">always</span></li>
+          <li class="y"><span class="ic">✓</span><span>Cartridge authentication</span><span class="st">always</span></li>
+          <li class="m"><span class="ic">○</span><span>Save data recovery</span><span class="st">on request</span></li>
+          <li class="m"><span class="ic">○</span><span>Bulk / wholesale refurbishment</span><span class="st">on request</span></li>
+          <li class="a"><span class="ic">?</span><span>Unknown clone hardware</span><span class="st">case-by-case</span></li>
+        </ul>
+      </div>
+
+      <div class="form-card">
+        <div class="form-banner">
+          <h3><em>03 ·</em> File an inquiry</h3>
+          <span class="ref">FORM 21-B · REV. 9</span>
+        </div>
+        <div class="form-body">
+          <div class="ff">
+            <label>Name <span class="req">*</span></label>
+            <input type="text" id="iName" placeholder="Full name"/>
+          </div>
+          <div class="ff">
+            <label>Reply to <span class="req">*</span></label>
+            <input type="email" id="iEmail" placeholder="you@domain.com"/>
+          </div>
+          <div class="ff">
+            <label>Device</label>
+            <select id="iDevice">
+              <option>Game Boy (DMG-01)</option>
+              <option>Game Boy Pocket</option>
+              <option>Game Boy Color</option>
+              <option>Game Boy Advance</option>
+              <option>Game Boy Advance SP</option>
+              <option>Game Boy Micro</option>
+              <option>Other / unsure</option>
+            </select>
+          </div>
+          <div class="ff">
+            <label>Service type</label>
+            <select id="iType">
+              <option>Repair</option>
+              <option>Modification (off-catalog)</option>
+              <option>Diagnosis only</option>
+              <option>Bulk / wholesale</option>
+              <option>Authentication</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <div class="ff full">
+            <label>Describe the situation <span class="req">*</span></label>
+            <textarea id="iMsg" placeholder="e.g. Japanese-region GBC, screen lines, refuses to boot certain carts. Looking for IPS swap plus shell, willing to pay for diagnosis."></textarea>
+          </div>
+        </div>
+        <div class="form-foot">
+          <div class="note">— Photos welcome in your reply email.</div>
+          <button class="btn red" onclick="submitInquiry()">Send inquiry <span class="arrow">→</span></button>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- ===== SOCIAL / WATCH ===== -->
+<section class="view" id="view-social">
+
+  <div class="watch-cover">
+    <div>
+      <div class="live-badge"><span class="live-dot"></span>Live · TikTok &amp; YouTube</div>
+      <h1>Live<br/><em>Feed.</em></h1>
+    </div>
+    <div class="lede">
+      We stream repairs and builds live on TikTok and YouTube — so you can watch your unit get worked on in real time. Not a polished edit. The actual bench, the actual tools, the actual process. If your build is scheduled during a stream slot, we'll tag you when we go live.
+    </div>
+  </div>
+
+  <!-- PLATFORMS -->
+  <div class="platform-grid">
+    <div class="platform-card">
+      <div class="plat-num">Platform · 01</div>
+      <div class="plat-icon">TT</div>
+      <div class="plat-name">TikTok</div>
+      <div class="plat-handle">@modmachine.shop</div>
+      <p>Live repair sessions, before-and-after reveals, solder close-ups, and the occasional catastrophic cap pop. Short clips of finished builds posted daily when in production.</p>
+      <a class="btn-sm" href="https://tiktok.com/@modmachine.shop" target="_blank">Follow on TikTok →</a>
+    </div>
+    <div class="platform-card">
+      <div class="plat-num">Platform · 02</div>
+      <div class="plat-icon">YT</div>
+      <div class="plat-name">YouTube</div>
+      <div class="plat-handle">@modmachine.shop</div>
+      <p>Full-length build videos, deep dives on specific mods (IPS installs, USB-C retrofits, bivert chip walkthroughs), and archived live streams with commentary.</p>
+      <a class="btn-sm" href="https://youtube.com/@modmachine.shop" target="_blank">Subscribe on YouTube →</a>
+    </div>
+  </div>
+
+  <!-- WATCH YOUR BUILD FEATURE -->
+  <div class="watch-feature">
+    <div class="wf-left">
+      <div class="eyebrow">⚙ EXCLUSIVE FEATURE</div>
+      <h2>Your build,<br/><em>your stream.</em></h2>
+      <p>When you submit a build or send in your unit, you can opt in to have your repair streamed live. We'll notify you when we go live so you can watch — and ask questions in real time.</p>
+      <p>No other shop does this. Your Game Boy goes from the box to the bench to the camera. You're in the room.</p>
+    </div>
+    <div class="wf-right">
+      <h3>How it works</h3>
+      <ul class="stream-steps">
+        <li><span class="sn">01</span><span>Submit your build via the configurator or inquiry form — tick the "stream my build" option.</span></li>
+        <li><span class="sn">02</span><span>We schedule your unit during a live stream slot and send you the date and time.</span></li>
+        <li><span class="sn">03</span><span>Join the stream, watch your repair happen, and ask questions in the chat.</span></li>
+        <li><span class="sn">04</span><span>The full session gets archived to YouTube so you have a permanent record of the build.</span></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- STREAM SCHEDULE -->
+  <div class="schedule">
+    <h2>Stream schedule</h2>
+    <div class="sub">Live repair sessions · All times EST · Subject to change</div>
+    <div class="schedule-grid">
+      <div class="sched-slot">
+        <div class="sched-day">Tuesday</div>
+        <div class="sched-time">7:00 PM</div>
+        <div class="sched-type">IPS installs &amp; display work</div>
+      </div>
+      <div class="sched-slot">
+        <div class="sched-day">Thursday</div>
+        <div class="sched-time">7:00 PM</div>
+        <div class="sched-type">Full builds &amp; shell swaps</div>
+      </div>
+      <div class="sched-slot">
+        <div class="sched-day">Saturday</div>
+        <div class="sched-time">2:00 PM</div>
+        <div class="sched-type">Open repairs &amp; diagnostics</div>
+      </div>
+      <div class="sched-slot tbd">
+        <div class="sched-day">Monday</div>
+        <div class="sched-time">Coming soon</div>
+        <div class="sched-type">Power &amp; audio mods</div>
+      </div>
+      <div class="sched-slot tbd">
+        <div class="sched-day">Wednesday</div>
+        <div class="sched-time">Coming soon</div>
+        <div class="sched-type">Q&amp;A &amp; viewer builds</div>
+      </div>
+      <div class="sched-slot tbd">
+        <div class="sched-day">Sunday</div>
+        <div class="sched-time">Coming soon</div>
+        <div class="sched-type">Deep dives &amp; teardowns</div>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+</div><!-- /frame -->
+
+<!-- ===== FOOTER ===== -->
+<footer class="endpaper">
+  <div class="frame">
+    <div>
+      <div class="big-mark">MOD<em>⚙</em>MACHINE</div>
+      <div class="tag">
+        Console Modification<br/>
+
+      </div>
+    </div>
+    <div>
+      <h5>Navigation</h5>
+      <ul>
+        <li><a href="#" onclick="setView('home');return false;">Operations</a></li>
+        <li><a href="#" onclick="setView('build');return false;">Work Order</a></li>
+        <li><a href="#" onclick="setView('inquire');return false;">Field Report</a></li>
+        <li><a href="#" onclick="setView('social');return false;">Live Feed</a></li>
+      </ul>
+    </div>
+    <div>
+      <h5>Services</h5>
+      <ul>
+        <li>Shell &amp; buttons</li>
+        <li>IPS retrofit</li>
+        <li>Audio circuit</li>
+        <li>Battery &amp; USB-C</li>
+        <li>Wireless audio</li>
+      </ul>
+    </div>
+    <div>
+      <h5>Contact &amp; follow</h5>
+      <ul>
+        <li><a href="mailto:builders@modmachine.shop">builders@modmachine.shop</a></li>
+        <li><a href="https://tiktok.com/@modmachine.shop" target="_blank">TikTok · @modmachine.shop</a></li>
+        <li><a href="https://youtube.com/@modmachine.shop" target="_blank">YouTube · @modmachine.shop</a></li>
+        <li>By appointment only</li>
+        <li>Returns: 60 days</li>
+      </ul>
+    </div>
+  </div>
+  <div class="endline">
+    <span>© 2026 · MOD MACHINE WORKSHOP</span>
+    <span>UNIT-04 · modmachine.shop</span>
+  </div>
+</footer>
+
+<script>
+  /* Theme applied inline — prevents flash of wrong colour mode on load.
+     Full app logic lives in app.js */
+/* ══════════════════════════════════════════
+     THEME TOGGLE
+  ══════════════════════════════════════════ */
+  function getEffectiveTheme() {
+    const stored = (function() { try { return localStorage.getItem('mm-theme'); } catch(e) { return null; } })();
+    if (stored) return stored;
+    return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+  }
+
+  function applyTheme(theme) {
+    document.documentElement.setAttribute('data-theme', theme);
+    const icon = document.getElementById('themeIcon');
+    const lbl  = document.getElementById('themeLabel');
+    if (icon) icon.textContent = theme === 'dark' ? '\u2600' : '\u263e';
+    if (lbl)  lbl.textContent  = theme === 'dark' ? 'Light' : 'Dark';
+  }
+
+  function toggleTheme() {
+    const next = getEffectiveTheme() === 'dark' ? 'light' : 'dark';
+    applyTheme(next);
+    try { localStorage.setItem('mm-theme', next); } catch(e) {}
+  }
+
+  applyTheme(getEffectiveTheme());
+
+  window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', function(e) {
+    try { if (localStorage.getItem('mm-theme')) return; } catch(err) {}
+    applyTheme(e.matches ? 'dark' : 'light');
+  });
+</script>
+<script src="app.js"></script>
+<!-- ===== BUILD CONTACT MODAL ===== -->
+<div id="buildModal" style="display:none;position:fixed;inset:0;z-index:200;
+     background:rgba(0,0,0,0.75);align-items:center;justify-content:center;padding:24px;">
+  <div class="bm-panel">
+    <div class="bm-head">
+      <span class="bm-title">⚙ Confirm Work Order</span>
+      <button class="bm-close" onclick="closeBuildModal()">✕</button>
+    </div>
+    <p class="bm-sub">Where do we send the confirmation and follow-up?</p>
+    <div id="bmForm">
+      <div class="ff">
+        <label>Your name <span class="req">*</span></label>
+        <input type="text"  id="bmName"  placeholder="Full name" />
+      </div>
+      <div class="ff">
+        <label>Your email <span class="req">*</span></label>
+        <input type="email" id="bmEmail" placeholder="you@domain.com"
+               onkeydown="if(event.key==='Enter') confirmBuildSubmit()" />
+      </div>
+    </div>
+    <div class="bm-foot">
+      <button class="bm-cancel" onclick="closeBuildModal()">Cancel</button>
+      <button class="bm-submit" id="bmSubmitBtn" onclick="confirmBuildSubmit()">
+        Send work order →
+      </button>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
