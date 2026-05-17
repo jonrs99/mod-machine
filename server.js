@@ -191,7 +191,7 @@ app.post('/api/inquiry', formLimiter, async (req, res) => {
       subject: 'Mod Machine — Inquiry received',
       html: emailWrapper('Inquiry Received', `
         ${row('Hi', name)}
-        ${row('Status', '<span style="color:#f0c000">Under review</span>')}
+        ${row('Status', <'span style="color:#f0c000">Under review</span'>)}
         <p style="color:#b0b0d0;font-size:14px;margin-top:20px;line-height:1.7;">
           We have your inquiry and will get back to you within 48 hours.
           Reply to this email to attach photos or add anything you forgot.
