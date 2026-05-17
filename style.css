@@ -2112,7 +2112,7 @@
   /* Footer */
   footer.endpaper { background: var(--bg-2); border-top-color: var(--yellow); color: var(--chrome-2); }
   footer .big-mark { color: var(--text); }
-  footer .big-mark em { color: var(--yellow); }
+  footer .big-mark em, footer .big-mark .small { color: var(--yellow); font-style: normal; }
   footer .tag { color: var(--chrome); }
   footer h5 { color: var(--yellow); }
   footer li { color: var(--chrome-2); }
