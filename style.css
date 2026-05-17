@@ -2450,3 +2450,24 @@
 }
 .bm-submit:hover    { background: var(--orange); color: var(--text); }
 .bm-submit:disabled { opacity: 0.6; cursor: not-allowed; }
+
+/* ── Logo image in masthead ──────────────────────────────────────── */
+.logo-img {
+  height: 52px;
+  width: auto;
+  display: block;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: opacity 0.15s ease;
+}
+.logo-img:hover { opacity: 0.85; }
+
+/* Wordmark is now an image — remove old text sizing */
+.wordmark {
+  padding: 0;
+  line-height: 1;
+}
+
+@media (max-width: 640px) {
+  .logo-img { height: 40px; }
+}
