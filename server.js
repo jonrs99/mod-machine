@@ -97,6 +97,10 @@ function row(label, value) {
   return `<div class="row"><span class="lbl">${esc(label)}</span><span class="val">${esc(value)}</span></div>`;
 }
 
+function rawRow(label, valueHtml) {
+  return `<div class="row"><span class="lbl">${esc(label)}</span><span class="val">${valueHtml}</span></div>`;
+}
+
 // ── POST /api/build ───────────────────────────────────────────────────────────
 app.post('/api/build', formLimiter, async (req, res) => {
   const { customerName, customerEmail, model, source, shell, buttons,
@@ -136,7 +140,7 @@ app.post('/api/build', formLimiter, async (req, res) => {
       subject: 'Mod Machine — Work order received',
       html: emailWrapper('Work Order Received', `
         ${row('Hi', customerName)}
-        ${row('Status', '<span style="color:#f0c000">Under review</span>')}
+        ${rawRow('Status', '<span style="color:#f0c000">Under review</span>')}
         <div class="row"><span class="lbl">Est. Total</span>
           <span class="val total">$${esc(String(total))}</span></div>
         <p style="color:#b0b0d0;font-size:14px;margin-top:20px;line-height:1.7;">
@@ -191,7 +195,7 @@ app.post('/api/inquiry', formLimiter, async (req, res) => {
       subject: 'Mod Machine — Inquiry received',
       html: emailWrapper('Inquiry Received', `
         ${row('Hi', name)}
-        ${row('Status', <'span style="color:#f0c000">Under review</span'>)}
+        ${rawRow('Status', '<span style="color:#f0c000">Under review</span>')}
         <p style="color:#b0b0d0;font-size:14px;margin-top:20px;line-height:1.7;">
           We have your inquiry and will get back to you within 48 hours.
           Reply to this email to attach photos or add anything you forgot.
