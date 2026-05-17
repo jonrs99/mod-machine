@@ -311,7 +311,7 @@
   const FAQ = [
     {
       q: 'How do I send my handheld in?',
-      a: 'After we confirm your estimate, we send packing notes and (optional) a pre-paid return label. Double-box it with the original screws, any saves you care about, and a note. We open the package on camera.'
+      a: 'After we confirm your estimate, we send packing notes and (optional) a pre-paid return label. We open the package on camera.'
     },
     {
       q: 'What\'s the typical turnaround?',
@@ -323,7 +323,7 @@
     },
     {
       q: 'Can you save my saves?',
-      a: 'Cartridge save data can usually be preserved by replacing the SRAM battery without erasing the chip. If a save is critical, mention it in the inquiry and we\'ll back it up before any work.'
+      a: 'Cartridge save data can be backed up and saved. Send us an inquiry for game cartridge repairs.'
     },
     {
       q: 'Do you work on clones or aftermarket consoles?',
@@ -331,7 +331,7 @@
     },
     {
       q: 'Where are you based, and do you ship internationally?',
-      a: 'Workshop No. 04 operates by appointment. Shipping is domestic by default; international by request — duties and import fees are the buyer\'s responsibility.'
+      a: 'Mod Machine is based in Michigan, USA. At the moment we do not provide service for our friends outside of the United States'
     },
   ];
 
