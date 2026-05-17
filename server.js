@@ -23,13 +23,12 @@ const helmet     = require('helmet');
 const path       = require('path');
 require('dotenv').config();
 
-// ── Validate required env vars on startup ─────────────────────────────────────
+// Warn about missing env vars but don't crash — site still serves without email
 const REQUIRED = ['SMTP_USER', 'SMTP_PASS'];
 const missing  = REQUIRED.filter(k => !process.env[k]);
 if (missing.length) {
-  console.error('Missing required environment variables:', missing.join(', '));
-  console.error('Copy .env.example → .env and fill in your credentials.');
-  process.exit(1);
+  console.warn('⚠ Missing env vars:', missing.join(', '));
+  console.warn('  Email submissions will fail until these are set in Railway Variables.');
 }
 
 const PORT      = process.env.PORT      || 3000;
@@ -48,10 +47,12 @@ const transporter = nodemailer.createTransport({
 });
 
 transporter.verify().then(() => {
-  console.log('✓ SMTP connection verified');
+  console.log('✓ SMTP connection verified — email is live');
 }).catch(err => {
-  console.error('✗ SMTP connection failed:', err.message);
-  console.error('  Check SMTP_USER and SMTP_PASS in your .env file.');
+  console.warn('⚠ SMTP connection failed:', err.message);
+  console.warn('  Email sending will not work until SMTP_USER and SMTP_PASS are set.');
+  console.warn('  The site will still serve normally.');
+  // Do NOT exit — let the server keep running
 });
 
 // ── Express setup ─────────────────────────────────────────────────────────────
