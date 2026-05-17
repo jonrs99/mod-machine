@@ -59,15 +59,7 @@ transporter.verify().then(() => {
 const app = express();
 
 app.use(helmet({
-  contentSecurityPolicy: {
-    directives: {
-      defaultSrc: ["'self'"],
-      styleSrc:   ["'self'", 'fonts.googleapis.com', "'unsafe-inline'"],
-      fontSrc:    ["'self'", 'fonts.gstatic.com'],
-      scriptSrc:  ["'self'", "'unsafe-inline'"],
-      imgSrc:     ["'self'", 'data:', 'www.extremerate.com'],
-    },
-  },
+  contentSecurityPolicy: false,  // Cloudflare handles security at the edge
 }));
 
 app.use(express.json({ limit: '64kb' }));

@@ -788,3 +788,10 @@
   renderGallery();
   renderFaq();
   renderAll();
+
+  // Explicitly expose functions used by inline onclick handlers in HTML
+  window.setView            = setView;
+  window.submitBuild        = submitBuild;
+  window.submitInquiry      = submitInquiry;
+  window.closeBuildModal    = closeBuildModal;
+  window.confirmBuildSubmit = confirmBuildSubmit;
