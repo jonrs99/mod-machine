@@ -104,7 +104,7 @@
     user-select: none;
     color: var(--text);
   }
-  .wordmark .small { color: var(--yellow); }
+  .wordmark .small { color: var(--yellow); font-style: normal; }
 
   /* Right-side container: nav + toggle */
   .mast-right {
@@ -2084,7 +2084,7 @@
   .masthead { background: var(--bg-2); border-bottom-color: var(--yellow); }
   .mast-row-1 { color: var(--chrome); border-bottom-color: var(--border); }
   .wordmark { color: var(--text); }
-  .wordmark .small { color: var(--yellow); }
+  .wordmark .small { color: var(--yellow); font-style: normal; }
   .mast-nav button { color: var(--chrome-2); border-right-color: var(--border); }
   .mast-nav button:hover { border-bottom-color: var(--yellow); color: var(--yellow); }
   .mast-nav button.active { background: var(--yellow); color: var(--bg); }
