@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://modmachine.shop/sitemap.xml
