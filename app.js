@@ -305,6 +305,16 @@
       date:  'May 2026',
       sold:  true,
     },
+        {
+      code:  '002',
+      name:  'GBC · Clear Blue — Grey',
+      model: 'GBC',
+      shell: 'gbc-clr-blue',
+      tags:  'Clear Blue shell · Grey Gold D-pad &amp; buttons · CGB-001 · AMOLED',
+      img:   'images/builds/build-002.jpg',
+      date:  'May 2026',
+      sold:  true,
+    },
   ];
 
   /* ===== FAQ ===== */
